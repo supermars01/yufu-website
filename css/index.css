@@ -62,7 +62,7 @@ a:hover {
 	height:70px;
 }
 .header {
-	background:#00a0e9;
+	background:#938273;
 	width:100%;
 	position:fixed;
 	top:0;
@@ -650,9 +650,12 @@ body {
 	padding-bottom:30px;
 }
 .slogan p {
-	width:450px;
+	width:430px;
 	clear:both;
 	margin:0 auto;
+}
+.slogan span {
+	letter-spacing: 10px
 }
 .group-summary {
 	/*padding-bottom:40px;*/
@@ -779,8 +782,8 @@ body {
 }
 .history #pic ul li img {
 	position:absolute;
-	left:-200px;
-	width:500px;
+	left:-275px;
+	width:650px;
 	height:100%;
 	transition:all .3s ease-out;
 	opacity:0;
@@ -928,6 +931,7 @@ body {
 }
 .history #year li.cur {
 	margin:0 10px;
+	border-bottom: 4px solid #a39382;
 }
 .history #year li.cur .icon-finyear {
 	line-height:121px;
