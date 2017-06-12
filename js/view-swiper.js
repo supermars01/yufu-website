@@ -47,7 +47,12 @@
             f = 2,
             d = !0,
             m = o("#content"),
-            g = m.find(".cur li").width();
+            g = m.find(".cur li").width(),
+            v = o("#pic"),
+            y = v.find("ul"),
+            k = y.find("li"),
+            mg= k.find("img"),
+            b = k.width();
         m.children("div").each(function(t) {
             var e = o(this),
                 r = e.find(".date li").length,
@@ -80,10 +85,23 @@
                 var e = u.eq(f);
                 e.addClass("cur"), e.prev().addClass("sibling"), e.next().addClass("sibling"), i(), s(), n("next")
             }
+            // 添加图片点击轮播功能
+        }),v.on("click", "img", function(t) {
+            t.preventDefault();
+            var e = o(this);
+            var index = e.attr("rel");
+            if (!u.eq(index).hasClass("cur")) {
+                f = parseInt(e.attr("rel")), c.css("-webkit-transform", "translate3d(" + (f - 2) * -h + "px,0,0)"), c.css("-moz-transform", "translate3d(" + (f - 2) * -h + "px,0,0)"), c.css("transform", "translate3d(" + (f - 2) * -h + "px,0,0)");
+                var r = l.find(".cur");
+                u.removeClass("sibling"), u.removeClass("cur"), u.eq(index).addClass("cur"), u.eq(index).prev().addClass("sibling"), u.eq(index).next().addClass("sibling"), i(), s();
+                var a = f > parseInt(r.attr("rel")) ? "next" : "prev";
+                n(a)
+            }
         });
         var v = o("#pic"),
             y = v.find("ul"),
             k = y.find("li"),
+            mg= k.find("img"),
             b = k.width();
         m.on("click", ".date li", function() {
             var t = o(this),
@@ -91,7 +109,7 @@
                 r = e.parent(),
                 n = parseInt(t.attr("rel"));
             e.css("-webkit-transform", "translate3d(" + (n - 1) * g * -1 + "px,0,0)"), e.css("-moz-transform", "translate3d(" + (n - 1) * g * -1 + "px,0,0)"), e.css("transform", "translate3d(" + (n - 1) * g * -1 + "px,0,0)"), e.find(".cur").removeClass("cur"), t.addClass("cur"), r.find(".txt .cur").removeClass("cur"), r.find(".txt li").eq(n).addClass("cur")
-        }), c.find("li:eq(0)").click(), o(".banner").unslider({
+        }),c.find("li:eq(0)").click(), o(".banner").unslider({
             arrows: !1,
             fluid: !0,
             dots: !0

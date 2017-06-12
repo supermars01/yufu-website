@@ -2,10 +2,10 @@
 .transparent-header .nav-second{
 	top: 70px
 }
-.nav-link span{color:#6d6b6b;}
-.nav-link a{color: #4d618b;text-decoration: none}
+.nav-link span{color:#6d6b6b;font-size: 14px}
+.nav-link a{color: #4d618b;text-decoration: none;font-size: 14px}
 .line{width: 100%;height:51px;border-bottom: 2px solid #4d618b;margin-top: 50px;}
-.line p{color:#4d618b;float:left;line-height: 50px;font-size: 25px;font-weight: bold;border-bottom: 4px solid #4d618b;margin-bottom: -2px}
+.line p{color:#4d618b;float:left;line-height: 50px;font-size: 20px;font-weight: bold;border-bottom: 4px solid #4d618b;margin-bottom: -2px}
 .fn-clear p{display: none}
 .cur p{
 		display: block;
