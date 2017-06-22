@@ -1,12 +1,6 @@
-.transparent-header .header{background-color: #938273}
-.transparent-header .nav-second{
-	top: 70px
-}
-.nav-link span{color:#6d6b6b;font-size: 14px}
-.nav-link a{color: #4d618b;text-decoration: none;font-size: 14px}
-.line{width: 100%;height:51px;border-bottom: 2px solid #4d618b;margin-top: 50px;}
-.line p{color:#4d618b;float:left;line-height: 50px;font-size: 20px;font-weight: bold;border-bottom: 4px solid #4d618b;margin-bottom: -2px}
-.news{margin:50px 0 100px;overflow: hidden;}
+﻿.newsList li.newsItems{display: none}
+.newsList li.active{display: block}
+.news{margin:50px 0 20px;overflow: hidden;}
 .news li{
 	width:50%;
 	height: auto;
@@ -15,20 +9,12 @@
 	margin-bottom: 50px;
 	box-sizing: border-box;
 }
-.news li a{text-decoration: none;display:block;overflow: hidden;box-shadow:5px 7px 10px #d0cccc;}
+.news li a{text-decoration: none;display:block;overflow: hidden;}
 .news li div{
 	display: block;
 	width: 100%;
 	height: auto;
 	position: relative;
-}
-.news li span{
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.8)); 
 }
 .news li img{
 	width: 100%;
@@ -46,6 +32,7 @@
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 4;
 	overflow: hidden;
+	color: #727070
 }
 .brief img{
 	width: 370px;
@@ -100,3 +87,4 @@
 .transparent-header .ui-container, .transparent .ui-container{
 	margin-top: 0
 }
+.transparent-header .header{background-color: #938273}

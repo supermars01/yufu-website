@@ -1,0 +1,66 @@
+﻿.cooper{margin:50px 0 80px;overflow: hidden;text-align: left}
+.cooper img{
+	display: block;
+	margin:10px auto 50px;
+	width: 350px;
+}
+.cooper p{
+	font-size: 16px;
+	line-height: 30px;
+	margin:0 78px 0;
+	text-align: left;
+	width: 800px;
+	color:#727070;
+}
+.cooper p.par1{
+	text-indent: 2em;
+}
+.cooper p span {
+    font-size: 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+.cooper h4{margin:20px 78px 10px;font-size: 16px;font-weight: bold;color: #727070;}
+.fn-clear p{display: none}
+.cur p{
+		display: block;
+	    width: 650px;
+	    line-height: 50px;
+	    height: 50px;
+	    color: #646464;
+	    position: absolute;
+	    left: -275px;
+	    top: 320px;
+	    font-size: 16px;
+	    text-align: center;
+	    background-color: #fff;
+}
+.cur p span{
+	display: block;
+	width: 610px;
+	padding: 0 20px;
+	height: 100%;
+	text-overflow:ellipsis; 
+	white-space:nowrap; 
+	overflow:hidden;
+}
+.cur p:before {
+	background-color:#fff;
+	position:absolute;
+	width: 10px;
+    height: 10px;
+    top: -5px;
+	left:47%;
+	z-index:9;
+	content:"";
+	border:0;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+}
+.transparent-header .ui-container, .transparent .ui-container{
+	margin-top: 0
+}
+.transparent-header .header{background-color: #938273}

@@ -1,18 +1,10 @@
-.transparent-header .header{background-color: #938273}
-.transparent-header .nav-second{
-	top: 70px
-}
-.nav-link span{color:#6d6b6b;font-size: 14px}
-.nav-link a{color: #4d618b;text-decoration: none;font-size: 14px}
-.line{width: 100%;height:51px;border-bottom: 2px solid #4d618b;margin-top: 50px;}
-.line p{color:#4d618b;float:left;line-height: 50px;font-size: 20px;font-weight: bold;border-bottom: 4px solid #4d618b;margin-bottom: -2px}
-.fn-clear p{display: none}
+﻿.fn-clear p{display: none}
 .cur p{
 		display: block;
 	    width: 650px;
 	    line-height: 50px;
 	    height: 50px;
-	    color: #646464;
+	    color: #727070;
 	    position: absolute;
 	    left: -275px;
 	    top: 320px;
@@ -45,6 +37,34 @@
 	-webkit-transform:rotate(45deg);
 	-o-transform:rotate(45deg);
 }
+.transparent-header .header{background-color: #938273}
 .transparent-header .ui-container, .transparent .ui-container{
 	margin-top: 0
+}
+.history #content{
+	margin: 50px auto 0;
+}
+.history #content .txt{
+	list-style:circle;
+	padding: 10px 10px 10px 40px;
+	width: 600px;
+	margin:0 auto;
+	text-align:left;
+}
+.history #content .txt li{
+	list-style:circle;
+	line-height: 30px;
+	margin: 20px 0 
+}
+.history #content:before {
+    display: none
+}
+.history #content .txt:before{
+	display: none
+}
+.history #content .txt li:before{
+	content: "●";
+    font-size: 20px;
+    padding-right: 10px;
+    margin-left: -22px
 }

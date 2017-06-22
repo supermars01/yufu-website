@@ -1,0 +1,27 @@
+﻿#setpage {
+    margin: 15px auto;
+    text-align: center;
+}
+#setpage a:link,#setpage a:visited,#setpage a:hover,#setpage .current,#setpage #info{ 
+    display:inline-block; 
+    margin:1px; 
+    text-decoration:none; 
+    text-align:center; 
+    color:#595757; 
+    padding: 5px 10px; 
+    font-size: 16px;
+    border-radius: 5px;
+} 
+#setpage a:hover{ 
+    font-size: 18px;
+    color:#a99685;
+    text-decoration: underline;
+} 
+#setpage .current{ 
+    font-size: 18px;
+    color:#a99685;
+    text-decoration: underline;
+} 
+#setpage #info{ 
+    width:auto; 
+}

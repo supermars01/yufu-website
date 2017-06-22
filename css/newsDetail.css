@@ -1,0 +1,107 @@
+﻿.news{width:650px;margin:50px auto 50px;overflow: hidden;box-sizing: border-box;color: #727070}
+.news li{
+	width:100%;
+	height: auto;
+	float: left;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+/*.news li a{text-decoration: none;display:block;overflow: hidden;box-shadow:5px 7px 10px #d0cccc;}*/
+.news li div.newTitle{
+	display: block;
+	height: auto;
+	position: relative;
+	padding: 0 10px 10px;
+	background-color: #fff;
+	text-align:center;
+}
+.news li div.newTitle h2{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 60px;
+}
+.news li img{
+	width: 100%;
+	display: block;
+	border:none;
+}
+.news li .newsDetail{
+	position: relative;
+	padding: 15px 30px;
+	font-size: 14px;
+	height: auto;
+	line-height: 25px;
+	margin-top: 30px;
+	background-color: #fff;
+	text-align: left;
+}
+.news li .newsDetail:before {
+	background-color:#fff;
+	position:absolute;
+	width: 20px;
+    height: 20px;
+    top: -10px;
+	left:47%;
+	z-index:9;
+	content:"";
+	border:0;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+}
+.news li .newsDetail h4{line-height: 50px}
+.news li .newsDetail h4 a{margin-left: 10px;}
+.news li .newsDetail h2{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 50px
+}
+.news li .newsDetail p{
+	line-height: 25px;
+	text-indent: 2em
+}
+.fn-clear p{display: none}
+.cur p{
+		display: block;
+	    width: 650px;
+	    line-height: 50px;
+	    height: 50px;
+	    color: #646464;
+	    position: absolute;
+	    left: -275px;
+	    top: 320px;
+	    font-size: 16px;
+	    text-align: center;
+	    background-color: #fff;
+}
+.cur p span{
+	display: block;
+	width: 610px;
+	padding: 0 20px;
+	height: 100%;
+	text-overflow:ellipsis; 
+	white-space:nowrap; 
+	overflow:hidden;
+}
+.cur p:before {
+	background-color:#fff;
+	position:absolute;
+	width: 10px;
+    height: 10px;
+    top: -5px;
+	left:47%;
+	z-index:9;
+	content:"";
+	border:0;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+}
+.transparent-header .ui-container, .transparent .ui-container{
+	margin-top: 0
+}
+.transparent-header .header{background-color: #938273}

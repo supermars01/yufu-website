@@ -1,4 +1,4 @@
-/**
+﻿/**
  * cookie操作
  */
 var getCookie = function(name, value, options) {
