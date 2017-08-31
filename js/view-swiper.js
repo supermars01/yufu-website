@@ -87,7 +87,7 @@
             }
             // 添加图片点击轮播功能
         }),v.on("click", "img", function(t) {
-            t.preventDefault();
+            // t.preventDefault();
             var e = o(this);
             var index = e.attr("rel");
             if (!u.eq(index).hasClass("cur")) {
