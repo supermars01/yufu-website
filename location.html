@@ -127,9 +127,9 @@
     var map = new AMap.Map("mapArea", {
       resizeEnable: true,
       zoomEnable:false,
-      dragEnable: false
     });
     var city=["北京总部","广州分公司","上海分公司","山东分公司","青岛分公司","四川分公司","天津分公司","山西分公司"]
+    var citys=["黑龙江分公司","江苏分公司","浙江分公司","河南分公司","河北分公司","湖北分公司","福建分公司","湖南分公司","安徽分公司","陕西分公司","辽宁分公司","云南分公司","贵州分公司","江西分公司","广西分公司","吉林分公司","内蒙古分公司","新疆分公司","海南分公司","甘肃分公司","宁夏分公司","香港分公司","青海分公司","西藏分公司","台湾分公司","澳门分公司","重庆分公司"]
     var lnglats = [
         [116.351727,39.908149], //北京
         [113.263086,23.130803],  //广州
@@ -140,19 +140,72 @@
         [117.20042,39.086896],  //天津
         [112.549219,37.872789]  //山西
     ];
+    var lnglatss = [
+        [126.535319,45.803131], //黑龙江省
+        [120.585279,31.299732], //江苏省
+        [120.209947,30.245853], //浙江省
+        [113.62536,34.746333], //河南省
+        [114.514933,38.04247], //河北省
+        [114.305214,30.592934], //湖北省
+        [119.296389,26.074268], //福建省
+        [112.938888,28.228272], //湖南省
+        [117.227308,31.82057], //安徽省
+        [108.939621,34.343147], //陕西省
+        [123.464679,41.677393], //辽宁省
+        [102.833722,24.881539], //云南省
+        [106.629724,26.647254], //贵州省
+        [115.857963,28.683016], //江西省
+        [108.36637,22.817746], //广西壮族自治区
+        [125.323628,43.817001], //吉林省
+        [111.748426,40.842723], //内蒙古自治区
+        [87.616842,43.82539], //新疆维吾尔自治区
+        [110.198286,20.044412], //海南省
+        [103.834244,36.06081], //甘肃省
+        [106.230903,38.487747], //宁夏回族自治区
+        [114.144845,22.285346], //香港特别行政区
+        [101.778112,36.617042], //青海省
+        [91.171961,29.653482], //西藏自治区
+        [121.51282,25.044013], //台湾省
+        [113.541923,22.176873], //澳门特别行政区
+        [106.550464,29.563761], //重庆市
+    ];
     var infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)});
     for (var i = 0, marker; i < lnglats.length; i++) {
         var marker = new AMap.Marker({
             position: lnglats[i],
             map: map,
-            index: i
+            index: i,
         });
         marker.content = city[i];
         marker.on('mouseover', markerover);
         marker.on('click', markerClick);
         // marker.emit('click', {target: marker});
     }
+
+    // 其余35个省市自治区
+    var icon = new AMap.Icon({
+        image : 'http://webapi.amap.com/theme/v1.3/markers/n/mark_r.png',//24px*24px
+        //icon可缺省，缺省时为默认的蓝色水滴图标，
+        size : new AMap.Size(24,32)
+    });
+    for (var i = 0, markers; i < lnglatss.length; i++) {
+        var markers = new AMap.Marker({
+            icon : icon,//24px*24px
+            position: lnglatss[i],
+            map: map,
+            index: i
+        });
+        markers.content = citys[i];
+        markers.on('mouseover', markerovers);
+    }
+    // 其余35个省市自治区
+
     function markerover(e){
+        // console.log(e.target.G.index);
+        infoWindow.setContent(e.target.content);
+        infoWindow.open(map, e.target.getPosition());
+    }
+    function markerovers(e){
         // console.log(e.target.G.index);
         infoWindow.setContent(e.target.content);
         infoWindow.open(map, e.target.getPosition());
