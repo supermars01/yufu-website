@@ -13,7 +13,7 @@
             strHeader += "      <div class=\"nav-lang\"> \n";
             strHeader += "       <ul class=\"lang-downlist\"> \n";
             strHeader += "        <li class=\"downlist-item  current\" data-value=\"zh-CN\"> <a class=\"item-link\">简<\/a> <\/li> \n";
-            strHeader += "        <li class=\"downlist-item\" data-value=\"zh-TW\"> <a class=\"item-link\">繁<\/a> <\/li> \n";
+            // strHeader += "        <li class=\"downlist-item\" data-value=\"zh-TW\"> <a class=\"item-link\">繁<\/a> <\/li> \n";
             strHeader += "        <li class=\"downlist-item\" data-value=\"en\"> <a class=\"item-link\">EN<\/a> <\/li> \n";
             strHeader += "       <\/ul> \n";
             strHeader += "      <\/div> \n";

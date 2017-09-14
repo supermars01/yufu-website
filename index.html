@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-<!-- saved from url=(0023)https://www.antfin.com/ -->
 <html lang="zh_CN">
  <head> 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
@@ -123,9 +122,9 @@
     <div class="mark"></div> 
    </div> 
    <div class="content"> 
-    <div class="slogan"> 
+    <!-- <div class="slogan"> 
      <p><span style="float: left;margin-left:7px" class="i18n" name="slogan1"></span><span style="float: right;margin-right: -2px" class="i18n" name="slogan2"></span></p> 
-    </div> 
+    </div> --> 
     <div class="group-summary"> 
      <div class="title"> 
       <hr /> 
@@ -136,12 +135,12 @@
       <p class="i18n" name="CompanyInfos2"></p> 
      </div> 
     </div> 
-    <div class="group-summary la"> 
+    <div class="group-summary"> 
      <div class="title"> 
       <hr /> 
       <p><a href="./history.html" class="i18n pa" name="CompanyProcess"></a></p>  
      </div> 
-     <div class="history"> 
+     <div class="history la"> 
       <div id="year"> 
        <div> 
         <ul class="fn-clear" style="transform: translate3d(-1200px, 0px, 0px);"> 
@@ -336,7 +335,6 @@
     var $body = $('body'),
         itimer;
     var container = $("#container");
-
     function setBuleHeader() {
         var top = container[0].getBoundingClientRect().top;
         if (Math.abs(top) > 450 - 90 - 10) {

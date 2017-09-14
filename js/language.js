@@ -63,8 +63,8 @@ var i18nLanguage = "zh-CN";
 /*
 设置一下网站支持的语言种类
  */
-var webLanguage = ['zh-CN', 'zh-TW', 'en'];
-
+// var webLanguage = ['zh-CN', 'zh-TW', 'en'];
+var webLanguage = ['zh-CN', 'en'];
 /**
  * 执行页面i18n方法
  * @return
@@ -146,12 +146,23 @@ $(function(){
     // });
     $(".lang-downlist li").each(function(){
         $(this).click(function(){
-            var language = $(this).attr("data-value"); 
+            var language = $(this).attr("data-value");
             getCookie("userLanguage",language,{
                 expires: 30,
                 path:'/'
             });
+            if(window.localStorage){
+                window.localStorage.setItem('language',language);
+            }
             location.reload();
         })
     })
+    // 获取当前  language  改变页面样式
+    if(window.localStorage){
+        var language = window.localStorage.getItem('language');
+        if(language == 'en'){
+            $(".header-nav").addClass("header-navEn");
+            $("body").addClass("enFont")
+        }
+    }
 });

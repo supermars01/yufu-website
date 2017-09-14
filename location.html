@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-<!-- saved from url=(0023)https://www.antfin.com/ -->
 <html lang="zh_CN">
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
@@ -123,13 +122,20 @@
   <script type="text/javascript" src="./js/addToolbar.js"></script>
   <!-- <script type="text/javascript" src="../js/view-swiper.js"></script> --> 
   <script type="text/javascript">
+  $(function(){
+    var language = ($(".current a").html())
     //初始化地图对象，加载地图
     var map = new AMap.Map("mapArea", {
       resizeEnable: true,
       zoomEnable:false,
     });
-    var city=["北京总部","广州分公司","上海分公司","山东分公司","青岛分公司","四川分公司","天津分公司","山西分公司"]
-    var citys=["黑龙江分公司","江苏分公司","浙江分公司","河南分公司","河北分公司","湖北分公司","福建分公司","湖南分公司","安徽分公司","陕西分公司","辽宁分公司","云南分公司","贵州分公司","江西分公司","广西分公司","吉林分公司","内蒙古分公司","新疆分公司","海南分公司","甘肃分公司","宁夏分公司","香港分公司","青海分公司","西藏分公司","台湾分公司","澳门分公司","重庆分公司"]
+    if(language == 'EN'){
+      var city=["Beijing headquarters","Guangzhou branch","Shanghai branch","Shandong branch","Qingdao branch","Sichuan branch","Tianjin branch","Shanxi branch"];
+      var citys=["Heilongjiang branch", "Jiangsu branch", "Zhejiang branch", "Henan branch", "Hebei branch", "Hubei branch", "Fujian branch", "Hunan branch", "Anhui branch", "Shaanxi branch", "Liaoning the branch", "Yunnan branch", "Guizhou branch", "Jiangxi branch", "Guangxi branch", "Jilin branch", "Inner Mongolia branch", "Xinjiang branch", "Hainan branch", "Gansu branch", "Ningxia branch", "Hongkong branch", "Qinghai branch", "Tibet branch", "Taiwan branch", "Macao branch", "Chongqing branch"]
+    }else{
+      var city=["北京总部","广州分公司","上海分公司","山东分公司","青岛分公司","四川分公司","天津分公司","山西分公司"]
+      var citys=["黑龙江分公司","江苏分公司","浙江分公司","河南分公司","河北分公司","湖北分公司","福建分公司","湖南分公司","安徽分公司","陕西分公司","辽宁分公司","云南分公司","贵州分公司","江西分公司","广西分公司","吉林分公司","内蒙古分公司","新疆分公司","海南分公司","甘肃分公司","宁夏分公司","香港分公司","青海分公司","西藏分公司","台湾分公司","澳门分公司","重庆分公司"]
+    }
     var lnglats = [
         [116.351727,39.908149], //北京
         [113.263086,23.130803],  //广州
@@ -170,9 +176,15 @@
         [106.550464,29.563761], //重庆市
     ];
     var infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)});
+    var icon = new AMap.Icon({
+        image : './images/mark_r.png',//24px*24px
+        //icon可缺省，缺省时为默认的蓝色水滴图标，
+        size : new AMap.Size(24,32)
+    });
     for (var i = 0, marker; i < lnglats.length; i++) {
         var marker = new AMap.Marker({
             position: lnglats[i],
+            icon : icon,//24px*24px
             map: map,
             index: i,
         });
@@ -183,14 +195,9 @@
     }
 
     // 其余35个省市自治区
-    var icon = new AMap.Icon({
-        image : 'http://webapi.amap.com/theme/v1.3/markers/n/mark_r.png',//24px*24px
-        //icon可缺省，缺省时为默认的蓝色水滴图标，
-        size : new AMap.Size(24,32)
-    });
+    
     for (var i = 0, markers; i < lnglatss.length; i++) {
         var markers = new AMap.Marker({
-            icon : icon,//24px*24px
             position: lnglatss[i],
             map: map,
             index: i
@@ -217,6 +224,7 @@
         }, 0);
     }
     map.setFitView();
+    })
 </script>
  </body>
 </html>

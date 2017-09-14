@@ -33,7 +33,7 @@
 	line-height: 25px;
 	margin-top: 30px;
 	background-color: #fff;
-	text-align: left;
+	/*text-align: left;*/
 }
 .news li .newsDetail:before {
 	background-color:#fff;
